@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아칼리 팬클럽</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ff80bf;
+            color: white;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 50px;
+        }
+
+        h3 {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .community-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .community-content {
+            background-color: rgb(180, 49, 114);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .post {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .share-content {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .share-content form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .share-content form label {
+            margin-bottom: 10px;
+        }
+
+        .share-content form input[type="file"],
+        .share-content form input[type="submit"] {
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .upload-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .upload-section input[type="file"] {
+            display: none;
+        }
+
+        .upload-section label {
+            background-color: #ffffff;
+            color: #ff80bf;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .upload-section label:hover {
+            background-color: #ff80bf;
+            color: #ffffff;
+        }
+
+        .upload-section p {
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>아칼리 팬클럽</h1>
+    </header>
+
+    <section class="community-section">
+        <h2>팬아트 공유</h2>
+        <div class="image-container">
+            <img src="img/akali1.png" alt="아칼리 이미지 1">
+            <img src="img/akali2.png" alt="아칼리 이미지 2">
+            <img src="img/akali3.png" alt="아칼리 이미지 3">
+            <img src="img/akali4.png" alt="아칼리 이미지 4">
+            <img src="img/akali5.png" alt="아칼리 이미지 5">
+            <img src="img/akali6.png" alt="아칼리 이미지 6">
+            <!-- 추가적인 이미지를 여기에 추가하세요 -->
+        </div>
+        <div class="community-content">
+            <form>
+                <label for="art-title">팬아트 제목:</label>
+                <input type="text" id="art-title" name="art-title">
+
+                <label for="art-description">팬아트 설명:</label>
+                <input type="text" id="art-description" name="art-description">
+
+                <label for="file-input">팬아트 사진 업로드:</label>
+                <input type="file" id="file-input">
+
+                <input type="submit" value="공유하기">
+            </form>
+        </div>
+    </section>
+
+    <section class="upload-section">
+        <h3>파일 선택</h3>
+        <input type="file" id="file-input">
+        <label for="file-input">업로드</label>
+        <p>선택한 파일: <span id="file-name"></span></p>
+    </section>
+
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const fileName = document.getElementById('file-name');
+
+        fileInput.addEventListener('change', function() {
+            fileName.textContent = fileInput.files[0].name;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아칼리 팬클럽</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ff80bf;
+            color: white;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h3 {
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer; /* 커서를 손가락 모양으로 변경 */
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .community-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .community-content {
+            background-color: rgb(180, 49, 114);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>아칼리 팬클럽</h1>
+    </header>
+    <section class="community-section">
+        <div class="community-content">
+            <h3 id="discussion-btn">토론 게시판</h3>
+            <h3 id="fanart-btn">팬아트 공유</h3>
+            <p>여기서 아칼리와 관련된 토론을 나누어보세요. 다른 팬들과 의견을 공유하고 소통할 수 있습니다!</p>
+        </div>
+    </section>
+
+    <p>아칼리 팬클럽은 아칼리를 좋아하는 팬들을 위한 커뮤니티입니다. 우리는 아칼리에 대한 팬아트 작품들을 공유하고 함께 감상하며 소통하는 공간을 제공합니다.</p>
+
+    <!-- 이미지 추가 -->
+    <div class="image-container">
+        <img src="img/kda.png" alt="kda">
+        
+    </div>
+
+    <script>
+        // 토론 게시판 버튼 클릭 시 새 창 열기
+        document.getElementById('discussion-btn').addEventListener('click', function() {
+            window.open('discussion.html', '_blank');
+        });
+
+        // 팬아트 공유 버튼 클릭 시 새 창 열기
+        document.getElementById('fanart-btn').addEventListener('click', function() {
+            window.open('fanart.html', '_blank');
+        });
+    </script>
+</body>
+</html>
